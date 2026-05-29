@@ -1,0 +1,28 @@
+apply plugin: "com.android.application"
+
+android {
+    namespace "com.example.sensors"
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.sensors"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    /*
+     * The lab is organized around fragments.
+     * FragmentActivity gives us getSupportFragmentManager().
+     */
+    implementation "androidx.fragment:fragment:1.8.9"
+
+    /*
+     * Needed for the modern ActivityResult API used by the step counter
+     * permission request.
+     */
+    implementation "androidx.activity:activity:1.13.0"
+}
